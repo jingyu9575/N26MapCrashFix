@@ -12,7 +12,7 @@ public class Main implements IXposedHookLoadPackage {
 	public void handleLoadPackage(XC_LoadPackage.LoadPackageParam lpparam) throws Throwable {
 		if (!lpparam.packageName.equals("de.number26.android"))
 			return;
-		findAndHookMethod("de.number26.machete.android.ui.map.MapFragment", lpparam.classLoader, "Db", new XC_MethodHook() {
+		findAndHookMethod("de.number26.machete.android.ui.map.MapFragment", lpparam.classLoader, "G1", new XC_MethodHook() {
 			@Override
 			protected void afterHookedMethod(MethodHookParam param) {
 				if (param.getThrowable() != null)
